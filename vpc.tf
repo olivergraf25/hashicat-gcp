@@ -1,7 +1,7 @@
 module "network" {
   source  = "app.terraform.io/alkasaiz/network/google"
 
-  version = "3.4.0"
+  version = "4.0.0"
   # insert required variables here
   network_name = "alka-network"
   project_id = var.project
