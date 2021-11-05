@@ -125,10 +125,9 @@ resource "google_compute_network" "gaurav-network" {
   auto_create_subnetworks = false
 }
 
-resource "google_compute_subnetwork" "gaurav-subnet" {
-  name          = "gaurav-subnet"
-  region        = var.region
-  network       = "gaurav-network"
-  ip_cidr_range = "10.100.10.0/24"
-
-}
+#resource "google_compute_subnetwork" "gaurav-subnet" {
+#  name          = "gaurav-subnet"
+#  region        = var.region
+#  network       = "gaurav-network"
+#  ip_cidr_range = "10.100.10.0/24"
+#}
