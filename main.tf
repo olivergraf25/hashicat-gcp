@@ -68,6 +68,8 @@ resource "google_compute_instance" "hashicat" {
 
   labels = {
     name = "hashicat"
+    department = "devops"
+    billable = "true"
   }
 
 }
@@ -116,4 +118,17 @@ resource "null_resource" "configure-cat-app" {
       host        = google_compute_instance.hashicat.network_interface.0.access_config.0.nat_ip
     }
   }
+}
+
+resource "google_compute_network" "gaurav-network" {
+  name                    = "gaurav-network"
+  auto_create_subnetworks = false
+}
+
+resource "google_compute_subnetwork" "gaurav-subnet" {
+  name          = "gaurav-subnet"
+  region        = var.region
+  network       = "gaurav-network"
+  ip_cidr_range = "10.100.10.0/24"
+
 }
