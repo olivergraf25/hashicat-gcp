@@ -1,9 +1,9 @@
 module "network" {
   source  = "app.terraform.io/alkasaiz/network/google"
   version = "3.4.0"
-
-network_name = "alkanet"
-project_id = var.project 
+  # insert required variables here
+  network_name = "gaurav_subnet"
+  project_id = var.project
 
 subnets = [
   {
@@ -11,5 +11,5 @@ subnets = [
     subnet_ip     = "10.100.10.0/24"
     subnet_region = var.region
   }
- ]
+]
 }
