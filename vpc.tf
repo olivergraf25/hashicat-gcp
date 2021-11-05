@@ -8,9 +8,9 @@ module "network" {
 
   subnets = [
   {
-    subnet_name   = "alka-subnet"
+    subnet_name   = "subnet01"
     subnet_ip     = "10.100.11.0/24"
-    subnet_region = var.region
-  }
+    subnet_region = "europe-west3"
+  },
 ]
 }
