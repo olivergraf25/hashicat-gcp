@@ -1,3 +1,7 @@
+network_name = "alkanet"
+
+project_id = var.project 
+
 subnets = [
   {
     subnet_name   = "gaurav-subnet"
