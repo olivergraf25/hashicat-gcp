@@ -1,6 +1,6 @@
 module "network" {
-source  = "terraform-google-modules/network/google"
-version = "3.4.0"
+  source  = "app.terraform.io/alkasaiz/network/google"
+  version = "3.4.0"
 
 network_name = "alkanet"
 project_id = var.project 
